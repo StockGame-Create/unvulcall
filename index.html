@@ -149,8 +149,51 @@ header{display:flex;align-items:center;justify-content:space-between;padding:14p
 @keyframes tin{from{transform:translateX(16px);opacity:0}to{transform:translateX(0);opacity:1}}
 @keyframes tout{to{opacity:0;pointer-events:none}}
 
+
 /* ── UNREAD ── */
 svg{display:inline-block}
+
+/* ── MOBILE ── */
+@media (max-width: 600px) {
+  /* 헤더 */
+  header{padding:10px 16px}
+  .logo{font-size:15px}
+
+  /* 설정 카드 */
+  #setup-screen{padding:16px}
+  .setup-card{padding:24px 20px;border-radius:16px}
+  .setup-card h1{font-size:20px}
+
+  /* PIP 작게 */
+  #pip{width:100px;height:68px;bottom:calc(var(--ctrl-h) + 8px);right:10px}
+
+  /* 컨트롤 버튼 */
+  :root{--ctrl-h:70px}
+  .ctrl-btn{width:42px;height:42px}
+  .ctrl-btn.end{width:48px;height:48px}
+  .call-controls{gap:7px}
+  .ctrl-sep{margin:0 2px}
+
+  /* 반응 피커 */
+  .reaction-picker{padding:6px 10px;gap:4px}
+  .r-btn{font-size:20px;padding:3px 5px}
+
+  /* 채팅 패널 — 전체화면 */
+  .chat-panel.open{
+    width:100vw;
+    position:absolute;
+    top:0;left:0;right:0;bottom:0;
+    z-index:100
+  }
+
+  /* 방 코드 배너 */
+  #room-banner{padding:5px 12px;gap:6px}
+  #room-banner strong{font-size:14px;letter-spacing:2px}
+
+  /* 토스트 */
+  .toast-wrap{top:60px;right:10px;left:10px}
+  .toast{max-width:100%}
+}
 </style>
 </head>
 <body>
